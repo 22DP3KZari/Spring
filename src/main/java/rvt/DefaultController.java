@@ -51,5 +51,17 @@ public class DefaultController {
         Money macins1 = new Money(10, 0);
         modelAndView.addObject("", macins1);
         return modelAndView;
+
+        // Constructor overloading
+        // Money macins1 = new Money(euros:10, cents: 0);
+        // Money macins2 = new Money(euros:10);
+        // Money macins3 = new Money();
+
+        // Method overloading
+        // macins1.plus(Money money);
+        // this.euros + euros, return new Money(...);
+        // macins1.plus(int euros);
+        // this.cents + cents, return new Money(...);
+        // macins1.plus(byte cents);
     }
 }

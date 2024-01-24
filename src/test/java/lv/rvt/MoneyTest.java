@@ -35,6 +35,13 @@ public class MoneyTest {
         Money result1 = money1.minus(money2);
 
         assertEquals(0, result1.less(money2));
+    }
 
+    @Test
+    public void testEqualsMethod() {
+        Money money1 = new Money(10, 50);
+        Money money2 = new Money(5, 50);
+
+        assertEquals(false, money1.equals(money2));
     }
 }

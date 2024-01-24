@@ -50,14 +50,37 @@ public class Money {
     }
 
     public Money minus(Money minus) { 
-        int newEuros = this.euros - minus.euros;
-        int newCents = this.cents - minus.cents;
+            int newEuros = this.euros - minus.euros;
+            int newCents = this.cents - minus.cents;
 
-        if (newCents < 0) {
-            newEuros-=1;
-            newCents += 100;
+            if (newCents < 0) {
+                newEuros-=1;
+                newCents += 100;
+            }
+            Money newMoney = new Money(newEuros, newCents);
+            return newMoney;
+        } // Add this closing brace for the minus method
+
+        public boolean equals(Object compared) {
+            // if the variables are located in the same position, they are equal
+
+            if (this == compared) {
+                return true;
+            }
+
+            // if the compared object is not of type Money, the objects are not equal
+            if(!(compared instanceof Money)) {
+                return false;
+            }
+
+            // convert the object into a Money object
+            Money comparedMoney = (Money) compared;
+
+            // if the values of the object variables are equal, the objects are equal
+            if (this.euros == comparedMoney.euros && this.cents == comparedMoney.cents) {
+                return true;
+            } else {
+                return false;
+            }
         }
-        Money newMoney = new Money(newEuros, newCents);
-        return newMoney;
     }
-}
