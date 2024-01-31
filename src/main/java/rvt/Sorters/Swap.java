@@ -1,4 +1,4 @@
-package rvt;
+package rvt.Sorters;
 
 public class Swap{
     public static void swap(int[] array, int index1, int index2) {
