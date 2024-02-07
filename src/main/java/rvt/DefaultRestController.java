@@ -13,10 +13,10 @@ public class DefaultRestController {
     @RequestMapping(value = "/student", produces = MediaType.APPLICATION_JSON_VALUE)
     String getAllStudents() {
         Student student = 
-        new Student("Jānis",
-        "Smith",
-        "j@s.lv",
-        "DP2-1");
+        new Student("Boris",
+        "Dzonsons",
+        "ervt.lv",
+        "DP2-3");
 
 
         ObjectMapper objectMapper = new ObjectMapper();
